@@ -33,8 +33,6 @@ test("POST-> 'BASE_URL' should return status code 201 and res.body.firstName to 
 test("GET-> 'BASE_URL' should return status code 200 and res.body has to have length === 1", async () => {
 	const res = await request(app)
 		.get(BASE_URL);
-
-	console.log(res.body) 
 	
 	expect(res.status).toBe(200);
 	expect(res.body).toBeDefined();
